@@ -1,0 +1,29 @@
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <Commands package="Package">
+    <Groups>
+      <Group guid="Commands" id="Group" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="Commands" id="Add" priority="0x0100" type="Button">
+        <Parent guid="Commands" id="Group" />
+        <Strings><ButtonText>Circle MAUI Apple Build: Add Package</ButtonText></Strings>
+      </Button>
+      <Button guid="Commands" id="Inspect" priority="0x0200" type="Button">
+        <Parent guid="Commands" id="Group" />
+        <Strings><ButtonText>Circle MAUI Apple Build: Inspect IPA</ButtonText></Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+  <Symbols>
+    <GuidSymbol name="Package" value="{320C2BD2-4F97-4A08-9E9D-93E1C64E8928}" />
+    <GuidSymbol name="Commands" value="{CB6A6ADF-1854-45F7-9ECF-166D668A8193}">
+      <IDSymbol name="Group" value="0x1020" />
+      <IDSymbol name="Add" value="0x0100" />
+      <IDSymbol name="Inspect" value="0x0101" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

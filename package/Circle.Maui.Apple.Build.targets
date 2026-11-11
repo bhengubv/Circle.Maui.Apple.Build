@@ -1,0 +1,10 @@
+<Project>
+  <Target Name="CircleFilterDesktopWhisperFromAppleBundle"
+          BeforeTargets="_ComputePublishLocation"
+          Condition="'$(UseMaui)' == 'true' AND ($([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios' OR $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst')">
+    <ItemGroup>
+      <ResolvedFileToPublish Remove="@(ResolvedFileToPublish)"
+          Condition="$([System.Text.RegularExpressions.Regex]::IsMatch('%(ResolvedFileToPublish.RelativePath)', '^runtimes[/\\](linux|macos|win)-[^/\\]+[/\\](lib)?(whisper|ggml[^/\\]*-whisper)\.(so|dylib|dll)$'))" />
+    </ItemGroup>
+  </Target>
+</Project>

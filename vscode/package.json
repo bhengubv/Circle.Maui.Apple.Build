@@ -1,0 +1,35 @@
+{
+  "name": "circle-maui-apple",
+  "displayName": "Circle MAUI Apple Build",
+  "description": "Build and inspect MAUI iOS packages.",
+  "publisher": "bhengubv",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhengubv/Circle.Maui.Apple.Build.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "main": "./extension.js",
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "circleApple.add",
+        "title": "Circle MAUI Apple: Add Build Package"
+      },
+      {
+        "command": "circleApple.build",
+        "title": "Circle MAUI Apple: Build Unsigned IPA"
+      },
+      {
+        "command": "circleApple.inspect",
+        "title": "Circle MAUI Apple: Inspect IPA"
+      }
+    ]
+  }
+}
